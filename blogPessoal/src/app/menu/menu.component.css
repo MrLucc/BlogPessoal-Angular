@@ -8,5 +8,22 @@ a {
 
 .fa {
     color: #dfcaa0;
-    ;
+}
+
+
+/*FONTE LINKADA NAS TAGS "P" E "A"(FONTE DARK SOULS)*/
+
+@font-face {
+    font-family: "fonteDS";
+    src: url("../../assets/fonts/OptimusPrinceps.ttf") format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font: 36px "fonteDS";
+}
+
+a {
+    font: 36px "fonteDS";
 }

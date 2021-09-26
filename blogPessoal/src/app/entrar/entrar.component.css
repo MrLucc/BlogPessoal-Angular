@@ -1,0 +1,61 @@
+/*TRATAMENTO DA IMAGEM NO BACKGROUND*/
+
+#img-bg {
+    background-image: url("../../assets/img/92311f58450d8704305d91a8d23b610a.jpg");
+    min-height: 979px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*FONTE LINKADA NAS TAGS(FONTE DARK SOULS)*/
+
+@font-face {
+    font-family: "fonteDS";
+    src: url("../../assets/fonts/OptimusPrinceps.ttf") format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+input {
+    font: 18px "fonteDS";
+    color: #dfcaa0;
+}
+
+a {
+    font: 18px "fonteDS";
+    color: #dfcaa0;
+}
+
+.p1 {
+    color: white;
+    text-shadow: #dfcaa0 0.3em 0.3em 0.2em
+}
+
+h1 {
+    font: 30px "fontDS";
+    color: #dfcaa0;
+}
+
+.bg-enter {
+    background-color: #0F0D01;
+}
+
+label {
+    font: 20px "fonteDS";
+    color: #dfcaa0;
+}
+
+.btn-color {
+    background-color: #e8bf3b;
+    color: #ffffff
+}
+
+.btn-shadow {
+    box-shadow: 0px 5px 10px rgb(232, 191, 59);
+}
+
+.btn-white {
+    box-shadow: 0px 5px 10px rgb(255, 255, 255);
+}

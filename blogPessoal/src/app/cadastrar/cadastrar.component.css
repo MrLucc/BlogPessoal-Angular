@@ -1,0 +1,40 @@
+#img-bg {
+    background-image: url("../../assets/img/98-981409_dark-souls-wallpaper-phone-4k.jpg");
+    min-height: 979px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-enter {
+    background-color: #0a1224;
+}
+
+
+/*FONTE LINKADA NAS TAGS(FONTE DARK SOULS)*/
+
+@font-face {
+    font-family: "fonteDS";
+    src: url("../../assets/fonts/OptimusPrinceps.ttf") format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font: 46px "fontDS";
+    color: #dfcaa0;
+}
+
+input {
+    font: 18px "fonteDS";
+    color: #dfcaa0;
+}
+
+label {
+    font: 20px "fonteDS";
+    color: #dfcaa0;
+}
+
+.btn-shadow {
+    box-shadow: 0px 5px 10px rgb(205, 219, 250);
+}
