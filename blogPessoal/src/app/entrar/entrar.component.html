@@ -12,17 +12,17 @@
                     <h1 class="text-center mb-3">Login <img src="https://img.icons8.com/external-tulpahn-outline-color-tulpahn/50/000000/external-excalibur-fairy-tale-tulpahn-outline-color-tulpahn.png" /> </h1>
 
                     <div class="form-group">
-                        <label for="user">User</label>
-                        <input class="form-control btn-shadow" type="text" name="user" id="user" placeholder="Your username">
+                        <label for="user">E-mail</label>
+                        <input [(ngModel)]="usuarioDTO.email" class="form-control btn-shadow" type="text" name="user" id="user" placeholder="Your e-mail">
                     </div>
 
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input class="form-control btn-shadow" type="password" name="password" id="password" placeholder="Your password">
+                        <input [(ngModel)]="usuarioDTO.senha" class="form-control btn-shadow" type="password" name="password" id="password" placeholder="Your password">
                     </div>
 
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-color">Sing In</button>
+                        <button type="submit" class="btn btn-color" (click)="entrar()">Sing In</button>
                     </div>
 
                     <hr class="mt-5 mb-5">

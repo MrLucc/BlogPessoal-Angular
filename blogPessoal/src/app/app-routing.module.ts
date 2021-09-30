@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { EntrarComponent } from './entrar/entrar.component';
+import { MenuComponent } from './menu/menu.component';
 
 const routes: Routes = [
 
@@ -9,6 +10,8 @@ const routes: Routes = [
 
   {path:"entrar", component: EntrarComponent},
   {path:"cadastrar", component: CadastrarComponent},
+
+  {path: "menu", component: MenuComponent}
 ];
 
 @NgModule({
