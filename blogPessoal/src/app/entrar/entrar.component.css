@@ -48,7 +48,7 @@ label {
 }
 
 .btn-color {
-    background-color: #e8bf3b;
+    background-color: #ed6952;
     color: #ffffff
 }
 
@@ -58,4 +58,13 @@ label {
 
 .btn-white {
     box-shadow: 0px 5px 10px rgb(255, 255, 255);
+}
+
+.fonteDS {
+    font: 20px "fonteDS";
+}
+
+.fonteDS1 {
+    font: 40px "fonteDS";
+    color: #ed6952;
 }

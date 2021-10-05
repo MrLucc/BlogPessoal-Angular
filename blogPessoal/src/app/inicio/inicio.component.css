@@ -1,0 +1,39 @@
+.btn-color {
+    background-color: #ed6952;
+    color: #130101
+}
+
+
+/*FONTE LINKADA NAS TAGS (FONTE DARK SOULS)*/
+
+@font-face {
+    font-family: "fonteDS";
+    src: url("../../assets/fonts/OptimusPrinceps.ttf") format("Truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font: 50pt "fonteDS";
+}
+
+h5 {
+    font: 42pt "fonteDS";
+}
+
+.fonteDS {
+    font: 20px "fonteDS";
+}
+
+.fonteDS-button {
+    font: 16px "fonteDS"
+}
+
+.fonteDS-h5 {
+    font: 36px "fonteDS"
+}
+
+.fonteDS-button-color {
+    font: 16px "fonteDS";
+    color: #dfcaa0;
+}

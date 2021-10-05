@@ -1,0 +1,101 @@
+<div class="container-fluid">
+
+    <div class="row d-flex align-items-center" style="background-color: #2f2f37">
+        <div class="col-md-6">
+
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-6" style="color: #dfcaa0;">
+                    <h1>Welcome home ashen one</h1>
+                    <h5>Speak thine heart's desire</h5>
+                </div>
+            </div>
+
+            <div class="row d-flex justify-content-center mt-3 mb-5">
+                <div class="col-md-6">
+                    <button class="btn btn-color mr-2 fonteDS" data-toggle="modal" data-target="#novaPostagem">New post</button>
+                    <a class="btn btn-color fonteDS" href="#postagens">See posts</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="../../assets/img/dark-souls-iii-fire-keeper-papel-de-parede-1280x1024_32.jpg" alt="fire keeper" height="700px" width="700px">
+        </div>
+
+    </div>
+
+
+</div>
+
+<div class="container mb-5 mt-5" id="postagens">
+    <ul class="nav nav-tabs d-flex justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active fonteDS" id="nav-allPosts-tab" data-toggle="tab" href="#allPosts" role="tab" aria-controls="nav-allPosts" aria-selected="true">
+                All posts</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fonteDS" id="nav-myPosts-tab" data-toggle="tab" href="#myPosts" role="tab" aria-controls="nav-myPosts" aria-selected="false">My posts</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link fonteDS" id="nav-postsTheme-tab" data-toggle="tab" href="#postsTheme" role="tab" aria-controls="nav-postsTheme" aria-selected="false">
+                Posts by theme</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active fonteDS" id="allPosts" role="tabpanel" aria-labelledby="nav-allPosts-tab">
+            All posts
+        </div>
+        <div class="tab-pane fade fonteDS" id="myPosts" role="tabpanel" aria-labelledby="nav-myPosts-tab">
+            My posts
+        </div>
+        <div class="tab-pane fade fonteDS" id="postsTheme" role="tabpanel" aria-labelledby="nav-postsTheme-tab">
+            Posts by theme
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="novaPostagem" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title fonteDS-h5" id="TituloModalCentralizado">New post</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <div class="from-group">
+                    <label for="title" class="fonteDS-button">Title</label>
+                    <input text="text" class="form-control fonteDS-button" id="titulo" placeholder="Enter title">
+                </div>
+
+                <div class="from-group  mb-3 mt-3">
+                    <label for=" text " class="fonteDS-button">Text</label>
+                    <textarea class="from-control" style="width: 467px;" name="text " id="text " rows="3 "></textarea>
+                </div>
+
+                <div class="from-group">
+                    <label for="text " class="fonteDS-button ">Choose a theme or <a href=" " class="fonteDS-button ">Register a new</a></label>
+                    <select name="theme " id="theme " class="form-control ">
+                        <Option value=" " class="fonteDS-button ">Theme</Option>
+                    </select>
+                </div>
+
+            </div>
+            <div class="modal-footer ">
+                <button type="button " class="btn btn-color fonteDS-button " data-dismiss="modal ">Cancel</button>
+                <button type="button " class="btn btn-color fonteDS-button ">Publish</button>
+            </div>
+        </div>
+    </div>
+</div>

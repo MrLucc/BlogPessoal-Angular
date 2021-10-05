@@ -38,3 +38,11 @@ label {
 .btn-shadow {
     box-shadow: 0px 5px 10px rgb(205, 219, 250);
 }
+
+.fonteDS {
+    font: 26px "fonteDS";
+}
+
+.fonteDS1 {
+    font: 40px "fonteDS";
+}
