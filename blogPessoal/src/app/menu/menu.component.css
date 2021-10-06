@@ -10,6 +10,10 @@ a {
     color: #dfcaa0;
 }
 
+.mg-cover {
+    object-fit: cover;
+}
+
 
 /*FONTE LINKADA NAS TAGS "P" E "A"(FONTE DARK SOULS)*/
 
