@@ -35,22 +35,50 @@
                 All posts</a>
         </li>
         <li class="nav-item" role="presentation">
-            <a class="nav-link fonteDS" id="nav-myPosts-tab" data-toggle="tab" href="#myPosts" role="tab" aria-controls="nav-myPosts" aria-selected="false">My posts</a>
+            <a (click)="findByIdUser()" class="nav-link fonteDS" id="nav-myPosts-tab" data-toggle="tab" href="#myPosts" role="tab" aria-controls="nav-myPosts" aria-selected="false">My posts</a>
         </li>
         <li class="nav-item" role="presentation">
             <a class="nav-link fonteDS" id="nav-postsTheme-tab" data-toggle="tab" href="#postsTheme" role="tab" aria-controls="nav-postsTheme" aria-selected="false">
                 Posts by theme</a>
         </li>
     </ul>
-    <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active fonteDS" id="allPosts" role="tabpanel" aria-labelledby="nav-allPosts-tab">
-            All posts
+    <div class="tab-content mb-5" id="myTabContent">
+        <div class="tab-pane fade show active fonteDS-letras" id="allPosts" role="tabpanel" aria-labelledby="nav-allPosts-tab">
+            <div class="d-flex flex-wrap justify-content-center mt-3">
+                <div class="card m-2" style="width: 18rem;" *ngFor='let item of listaPostagem'>
+                    <img src="https://i.imgur.com/iI7QACP.gif" class="card-img-top" alt="cards">
+                    <div class="card-body">
+                        <p class="card-title fonteDS-letras m-0">{{item.titulo}}</p>
+                        <small class="text-muted">Theme: {{item.temaRelacionado.tema}}</small>
+                        <p class="card-text fonteDS-letras mt-3">{{item.descricao}}</p>
+                        <p class="card-text fonteDS-letras"><small class="text-muted">by: {{item.criador.nome}}</small></p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="tab-pane fade fonteDS" id="myPosts" role="tabpanel" aria-labelledby="nav-myPosts-tab">
-            My posts
+            <div class="d-flex flex-wrap justify-content-center mt-3">
+                <div class="card m-2" style="width: 18rem;" *ngFor='let item of user.minhasPostagens'>
+                    <img src="https://i.imgur.com/iI7QACP.gif" class="card-img-top" alt="cards">
+                    <div class="card-body">
+                        <p class="card-title fonteDS-letras m-0">{{item.titulo}}</p>
+                        <small class="text-muted">Theme: {{item.temaRelacionado.tema}}</small>
+                        <p class="card-text fonteDS-letras mt-3">{{item.descricao}}</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="tab-pane fade fonteDS" id="postsTheme" role="tabpanel" aria-labelledby="nav-postsTheme-tab">
-            Posts by theme
+            <div class="d-flex flex-wrap justify-content-center mt-3" *ngFor="let tema of listaTemas">
+                <div class="card m-2" style="width: 18rem;" *ngFor='let item of tema.postagens'>
+                    <img src="https://i.imgur.com/iI7QACP.gif" class="card-img-top" alt="cards">
+                    <div class="card-body">
+                        <p class="card-title fonteDS-letras m-0">{{item.titulo}}</p>
+                        <p class="card-text fonteDS-letras mt-3">{{item.descricao}}</p>
+                        <p class="card-text fonteDS-letras"><small class="text-muted">by: {{item.criador.nome}}</small></p>
+                    </div>
+                </div>
+            </div>\
         </div>
     </div>
 </div>
@@ -76,25 +104,25 @@
             <div class="modal-body">
                 <div class="from-group">
                     <label for="title" class="fonteDS-button">Title</label>
-                    <input text="text" class="form-control fonteDS-button" id="titulo" placeholder="Enter title">
+                    <input [(ngModel)]="postagem.titulo" text="text" class="form-control fonteDS-button" id="titulo" placeholder="Enter title">
                 </div>
 
                 <div class="from-group  mb-3 mt-3">
                     <label for=" text " class="fonteDS-button">Text</label>
-                    <textarea class="form-control" style="width: 467px;" name="text " id="text " rows="3 "></textarea>
+                    <textarea [(ngModel)]="postagem.descricao" class="form-control fonteDS-button" style="width: 467px;" name="text " id="text " rows="3 "></textarea>
                 </div>
 
                 <div class="from-group">
                     <label for="text " class="fonteDS-button ">Choose a theme or <a data-dismiss="modal" routerLink="/tema" class="fonteDS-button ">Register a new</a></label>
-                    <select name="theme " id="theme " class="form-control ">
-                        <Option value=" " class="fonteDS-button ">Theme</Option>
+                    <select name="theme " id="theme " class="form-control fonteDS-button " [(ngModel)]="idTema" (change)="findByIdTema">
+                        <Option *ngFor="let item of listaTemas" value="{{item.idTema}} " class="fonteDS-button ">{{item.tema}}</Option>
                     </select>
                 </div>
 
             </div>
             <div class="modal-footer ">
                 <button type="button " class="btn btn-color fonteDS-button " data-dismiss="modal">Cancel</button>
-                <button type="button " class="btn btn-color fonteDS-button ">Publish</button>
+                <button type="button " class="btn btn-color fonteDS-button " (click)="publicar()" data-dismiss="modal">Publish</button>
             </div>
         </div>
     </div>
