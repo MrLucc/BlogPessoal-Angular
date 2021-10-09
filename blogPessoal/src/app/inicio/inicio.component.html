@@ -64,6 +64,10 @@
                         <p class="card-title fonteDS-letras m-0">{{item.titulo}}</p>
                         <small class="text-muted">Theme: {{item.temaRelacionado.tema}}</small>
                         <p class="card-text fonteDS-letras mt-3">{{item.descricao}}</p>
+
+                        <a [routerLink]="['/postagem-edit', item.idPostagem]" class="text-info mr-3" href="">Edit</a>
+                        <a [routerLink]="['/postagem-delete',item.idPostagem]" class="text-danger" href="">Delete</a>
+
                     </div>
                 </div>
             </div>
@@ -78,7 +82,7 @@
                         <p class="card-text fonteDS-letras"><small class="text-muted">by: {{item.criador.nome}}</small></p>
                     </div>
                 </div>
-            </div>\
+            </div>
         </div>
     </div>
 </div>

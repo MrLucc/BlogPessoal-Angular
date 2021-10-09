@@ -1,0 +1,39 @@
+<div class="container mt-5 mb-5">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="text-center text-secondary">Atualizar postagem</h1>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-6">
+
+            <div class="modal-body">
+                <div class="from-group">
+                    <label for="title" class="fonteDS-button">Title</label>
+                    <input [(ngModel)]="postagem.titulo" text="text" class="form-control fonteDS-button" id="titulo" placeholder="Enter title">
+                </div>
+
+                <div class="from-group  mb-3 mt-3">
+                    <label for=" text " class="fonteDS-button">Text</label>
+                    <textarea [(ngModel)]="postagem.descricao" class="form-control fonteDS-button" style="width: 512px;" name="text " id="text " rows="3 "></textarea>
+                </div>
+
+                <div class="from-group">
+                    <label for="text " class="fonteDS-button ">Choose a theme or <a data-dismiss="modal" routerLink="/tema" class="fonteDS-button ">Register a new</a></label>
+                    <select name="theme " id="theme " class="form-control fonteDS-button " [(ngModel)]="idTema" (change)="findByIdTema">
+                        <Option *ngFor="let item of listaTemas" value="{{item.idTema}} " class="fonteDS-button ">{{item.tema}}</Option>
+                    </select>
+                </div>
+
+                <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-danger mr-4" routerLink="/inicio">Cancel</button>
+                    <button class="btn btn-success" (click)="atualizar()">Update</button>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
